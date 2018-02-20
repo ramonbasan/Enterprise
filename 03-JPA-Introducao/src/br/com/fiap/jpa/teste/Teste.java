@@ -19,25 +19,14 @@ public class Teste {
 		
 	/*
 		Carro carro = new Carro(
-				"Celta", 
-				2010, 
-				"1.0", 
-				"GM", 
-				"DDD-9875",
+				"Celta", 2010, "1.0", "GM", "DDD-9875",
 				new GregorianCalendar(2010, Calendar.JANUARY, 2), 
-				false, 
-				false, 
-				null, 
-				Transmissao.MANUAL);
+				false, false, null, Transmissao.MANUAL);
 	*/
 //---------------------------------------------------------------------------------------
 		Cliente cliente = new Cliente(
-				"Ramon", //Nome
-				new GregorianCalendar(1987, Calendar.NOVEMBER, 11), //Data de Nascimento
-				123456, // Cod. Cartão Fidelidade
-				Sexo.MASCULINO, //Sexo
-				null, //Foto
-				Status.ATIVO);//Status
+				"Ramon", new GregorianCalendar(1987, Calendar.NOVEMBER, 11), 
+				123456, Sexo.MASCULINO, null, Status.ATIVO);
 		
 //---------------------------------------------------------------------------------------
 		em.getTransaction().begin(); // Inicia uma Transação
@@ -46,7 +35,6 @@ public class Teste {
 		//em.persist(carro);
 		
 		em.getTransaction().commit(); // Realiza commit
-
 		em.close();
 		fabrica.close();
 		
