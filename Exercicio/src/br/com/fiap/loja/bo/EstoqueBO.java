@@ -1,13 +1,20 @@
 package br.com.fiap.loja.bo;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import br.com.fiap.loja.to.ProdutoTO;
 
 public class EstoqueBO{
+	
+	private static final Logger log = LoggerFactory.getLogger(EstoqueBO.class);
+
 
 	public ProdutoTO consultarProduto(int codProduto) {
 
 		ProdutoTO to = null;
-
+		
+		log.debug("consultando um produto");
 		switch (codProduto) {
 
 		case 401:
